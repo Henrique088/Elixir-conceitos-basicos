@@ -1,0 +1,128 @@
+iex , terminal iterativo
+
+i (1) para saber o tipo inteiro
+i [1,2,3] para saber o tipo list
+i {1,2} para saber tupla
+i "a" para saber string
+
+" " é caractere
+' ' lista de caractere 
+
+
+Funções, em chamadas de funções o uso dos parenteses é opcional 
+
+
+definindo variavel: 
+
+nome =  2
+
+variavel / 2 
+R: 1.0
+
+i (variavel /2), retorna float ou seja / retorna float
+
+div (variavel, 2) função pronta 
+rem (variavel, 2) pega resto da divisão 
+
+
+print do Elixir:
+IO.puts("Teste")
+
+
+
+byte_size("água") , Elixir trabalha com UTF-8 aceita aceito e trata letras com acento como dois bytes
+5
+
+String.length("água")
+4
+
+
+Concatenação de String
+
+nome = Henrique
+
+IO.puts("Teste" <> nome <> ".")
+"Bem-vindo #nome{}."
+
+"Bem-vindo\n #nome{}." printa do jeito que tá
+
+IO.puts("Bem-vindo\n #nome{}.") ai funciona o \n
+
+
+
+
+Lista são ligadas e não vetores como em algumas outras linguagens.
+
+primeira_lista = [1,2,3]
+
+primeira_lista ++ [4,5,6] concatena duas listas
+
+
+primeira_lista -- [2]
+
+
+hd primeira_lista  retorna o head da lista 
+1
+
+tl primeira_lista retorna a cauda da lista 
+[2,3]
+
+
+[0 | primeira_lista] adiciona o 0 no começo da lista
+
+[zero | resto] = [0,1,2,3,4]
+[0,1,2,3,4]
+
+zero 0
+resto [1,2,3,,4]
+
+
+
+mapa 
+
+numeros = %{ 1 => "um", 2 => "dois"}
+
+numeros[2]
+"dois"
+
+numeros[1]
+"um"
+
+numeros[3]
+nil       retorna nulo 
+
+
+Atomo
+:2
+:false
+
+atomo é uma variavel em que seu nome é igual ao seu valor
+
+palavraschaves_list = [{:ok, true}, {:erro, false}]  neste caso é um mapeamento onde sempre teremos um atomo seguido do valor que ele guarda. Uma lista com tuplas dentro
+
+keyword_list = [um: 1, dois: 2, tres: 3]
+
+
+primeira_tupla = {"um", 1, 1.0, "I"}
+
+elem(primeira_tupla, 0)
+
+
+
+languages = ["Elixir", "PHP", "JS"]
+List.insert_at(languages, 0, "Java")
+
+adiciona Java na posição 0
+
+["Java", "Elixir", "PHP", "JS"]
+
+
+
+rodar 
+
+iex Teste.exs
+
+r(MeuModulo)
+
+
+o retorno de uma função é sempre a última instrução 

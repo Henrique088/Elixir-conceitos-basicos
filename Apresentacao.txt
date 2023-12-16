@@ -1,0 +1,143 @@
+iex
+
+Descobrindo os tipos dos dados
+i (1)
+i [1,2,3] lista
+i {1,2} tupla
+i "a"   string
+
+
+Definindo variavel e mexendo com ela
+
+numero = 2
+
+numero + 2
+numero - 2 
+numero * 2
+numero / 2
+
+
+funções prontas
+
+div (4, 2)  divisão 
+rem (8, 2)  resto
+
+i ( 4 /2) retorna float 
+
+
+print do Elixir
+
+nome = "Henrique Ribeiro"
+IO.puts(nome)
+
+
+
+outras funções prontas
+
+byte_size("água") Elixir trabalha com UTF-8, acento dois bytes
+
+String.length("água")
+
+
+
+Concatenação de String
+
+nome = "Henrique Ribeiro"
+
+IO.puts("Bem-Vindo " <> nome <> ".")
+
+"Bem-Vindo #nome{}."
+
+"Bem-Vindo\n #nome{}." 
+IO.puts("Bem-Vindo\n #nome{}.") ai funciona o \n
+
+
+
+Trabalhando com listas
+
+primeira_lista = [1,2,3]
+
+primeira_lista ++ [4,5,6] concatena
+ 
+primeira_lista -- [2] remove
+
+hd primeira_lista       retorna o head
+
+tl primeira_lista       retorna a cauda
+
+
+[0 | primeira_lista]  adiciona 0 
+
+[1,2,3 | [4,5,6] ]
+
+[zero | resto] = [0,1,2,3,4,5]
+
+zero 0
+resto [1,2,3,4]
+
+languages = ["Elixir", "PHP", "JS"]
+List.insert_at(languages, 0, "Java") inserir na lista 
+
+
+
+Mapa 
+chave -> valor 
+
+numeros = %{ 1 => "um" , 2 => "dois}
+
+acessando
+numeros[2]
+
+numeros[3]
+nil
+
+
+Atomo    seu nome é igual seu valor
+:2
+:false
+
+
+Lista mapeada 
+
+palavraschaves_list = [{:ok, true}, {:erro, false}]  
+
+palavraschaves_list[:ok]
+
+
+keyword_list = [um: 1, dois: 2, tres: 3]
+
+keyword_list[:um]
+
+
+primeira_tupla = {"um", 1, 1.0, "I"}
+
+elem(primeira_tupla, 0)  pega os elementos da tupla
+
+
+
+Funções anônimas, não são nomeadas
+
+soma = fn (a, b) -> a + b end
+soma.(2,3) 
+
+
+
+Funções nomeadas
+
+iex Test.exs
+
+import_file "math.exs"
+
+MeuModulo.ola_mundo
+
+
+
+
+
+
+
+
+
+
+
+
